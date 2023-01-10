@@ -1,0 +1,111 @@
+.master-svg {
+    position: relative;
+    height: 100px;
+}
+
+.master-svg {
+    background: url(https://thetrinityweb.com.br/outros/footer/fundo.webp);
+    background-size: cover;
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
+    overflow: hidden;
+    -webkit-transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
+    transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
+}
+
+.master-svg:hover {
+    width: 174px;
+      -webkit-transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
+          transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
+}
+
+.master-svg svg.logo {
+    position: absolute;
+    left: 8px;
+    top: 14px;
+    height: auto;
+    width: 30px;
+}
+
+svg#svg-trinity {
+    position: absolute;
+    top: 19px;
+    left: 45px;
+    width: 120px;
+    height: auto;
+}
+
+.master-svg #svg-trinity g#letters g {
+    opacity: 0;
+    -webkit-transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
+    transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
+}
+
+.master-svg:hover #svg-trinity g#letters .letras:nth-child(1){
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+		  opacity: 1;
+}
+.master-svg:hover #svg-trinity g#letters .letras:nth-child(2){
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+		  opacity: 1;
+}
+.master-svg:hover #svg-trinity g#letters .letras:nth-child(3){
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+		  opacity: 1;
+}
+.master-svg:hover #svg-trinity g#letters .letras:nth-child(4){
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+		  opacity: 1;
+}
+.master-svg:hover #svg-trinity g#letters .letras:nth-child(5){
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+		  opacity: 1;
+}
+.master-svg:hover #svg-trinity g#letters .letras:nth-child(6){
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+		  opacity: 1;
+}
+.master-svg:hover #svg-trinity g#letters .letras:nth-child(7){
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+		  opacity: 1;
+}
+.master-svg:hover #svg-trinity g#letters .letras:nth-child(8){
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+		  opacity: 1;
+}
+.master-svg:hover #svg-trinity g#letters .letras:nth-child(9){
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+		  opacity: 1;
+} 
+
+.master-svg:hover #svg-trinity g#letters .letras:nth-child(10){
+  -webkit-transition-delay:1s;
+          transition-delay:1s;
+		  opacity: 1;
+} 
+.master-svg #svg-trinity #letters g{
+	opacity: 0;
+}
+
+.master {
+    display: flex;
+    align-items: center;
+    place-content: center;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.copy-txt {
+    padding-right: 5px;
+    font-weight: bold;
+}
