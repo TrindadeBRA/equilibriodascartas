@@ -17,10 +17,18 @@ Route::get('/', function () {
     return view('home.index');
 });
 
-Route::get('/admin', function () {
-    return view('admin.dashboard');
-});
 
-Route::get('/admin/novo-jogo', function () {
-    return view('admin.dashboard');
+
+Route::prefix('/admin')->group(function(){
+
+    Route::get('/', function () {
+        return view('admin.dashboard');
+    })
+    ->name('admin.home');
+
+    Route::get('/novo-jogo', function () {
+        return view('admin.dashboard');
+    })
+    ->name('admin.novo-jogo');
+
 });
