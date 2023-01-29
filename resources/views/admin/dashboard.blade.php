@@ -10,11 +10,11 @@
     <body>
         <div class="flex w-screen h-screen text-gray-400 bg-gray-900">
 
-            @include('admin.components.sidebar')
+            @include('admin.layout.sidebar')
 
-            @include('admin.components.dropdown')
+            @include('admin.layout.dropdown')
 
-            @include('admin.components.content')
+            @include('admin.layout.content')
 
         </div>
     

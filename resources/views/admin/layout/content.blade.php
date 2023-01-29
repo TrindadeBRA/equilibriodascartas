@@ -1,4 +1,5 @@
 <div class="flex flex-col flex-grow">
+    
     <div class="flex items-center flex-shrink-0 h-16 px-8 border-b border-gray-800">
         <h1 class="text-lg font-medium">Home</h1>
         <button class="flex items-center justify-center h-10 px-4 ml-auto text-sm font-medium rounded hover:bg-gray-800">
@@ -21,6 +22,9 @@
         </button>
     </div>
     <div class="flex-grow p-6 overflow-auto bg-gray-800">
+        @isset($clientes)
+            <?php print_r($clientes); ?>
+        @endisset
         <div class="grid grid-cols-3 gap-6">
             <div class="h-24 col-span-1 bg-gray-700"></div>
             <div class="h-24 col-span-1 bg-gray-700"></div>

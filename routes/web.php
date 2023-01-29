@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClienteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,12 +24,8 @@ Route::prefix('/admin')->group(function(){
 
     Route::get('/', function () {
         return view('admin.dashboard');
-    })
-    ->name('admin.home');
+    })->name('admin.home');
 
-    Route::get('/novo-jogo', function () {
-        return view('admin.dashboard');
-    })
-    ->name('admin.novo-jogo');
+    Route::get('/novo-jogo', [ClienteController::class, 'index'])->name('admin.novo-jogo');
 
 });
