@@ -22,9 +22,6 @@
         </button>
     </div>
     <div class="flex-grow p-6 overflow-auto bg-gray-800">
-        @isset($clientes)
-            <?php print_r($clientes); ?>
-        @endisset
         <div class="grid grid-cols-3 gap-6">
             <div class="h-24 col-span-1 bg-gray-700"></div>
             <div class="h-24 col-span-1 bg-gray-700"></div>

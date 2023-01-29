@@ -12,9 +12,21 @@
 
             @include('admin.layout.sidebar')
 
+            
             @include('admin.layout.dropdown')
 
-            @include('admin.layout.content')
+            @switch($type)
+
+                @case('unset')
+                    @include('admin.layout.content')
+                    @break
+
+                @case('novo-jogo')
+                    @include('admin.components.form_clientes')
+                    @break
+                
+            @endswitch
+
 
         </div>
     

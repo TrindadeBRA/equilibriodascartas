@@ -16,12 +16,11 @@ return new class extends Migration
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
             $table->string('nome_completo');
-            $table->enum('sexo', ['masculino', 'feminino', 'não definido']);
+            $table->enum('genero', ['M', 'F', 'ND']);
             $table->date('data_nascimento');
             $table->string('signo');
             $table->string('celular')->nullable();
             $table->string('email')->nullable();
-            $table->integer('jogos_comprados');
             $table->timestamps();
         });
     }
