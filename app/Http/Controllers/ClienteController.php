@@ -48,6 +48,14 @@ class ClienteController extends Controller
     }
 
     public function salvar(Request $request){
+
+        $request->validate([
+            "nome_completo" => 'required',
+            "genero" => 'required',
+            "data_nascimento" => 'required'
+        ]);
+
+
         $cliente = new Clientes();
         $cliente->nome_completo = $request->input("nome_completo");
         $cliente->genero = $request->input("genero");
@@ -57,7 +65,6 @@ class ClienteController extends Controller
         $cliente->email = $request->input("email");
         $cliente->instagram = $request->input("instagram");
         
-        // print_r($cliente->getAttributes());
         $cliente->save();
 
         return redirect()->route('admin.home');
