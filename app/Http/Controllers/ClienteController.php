@@ -67,7 +67,7 @@ class ClienteController extends Controller
         
         $cliente->save();
 
-        return redirect()->route('admin.home');
+        return redirect()->route('admin.listar-clientes');
 
     }
 
