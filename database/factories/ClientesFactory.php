@@ -1,18 +1,28 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Database\Factories;
 
-use App\Models\Clientes;
+use App\Http\Controllers\ClienteController;
 use DateTime;
-use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ClienteController extends Controller
+class ClientesFactory extends Factory
 {
-    public function index(){
-        
-        $x = ['type' => 'novo-jogo'];
+    public function definition()
+    {
+        $name = $this->faker->name();
+        $date = $this->faker->time('Y-m-d');
+        $ig_username = "@" . $this->faker->unique()->words(1, true);
 
-        return view('admin.dashboard', $x);
+        return [
+            "nome_completo" => $name,
+            "genero" =>  $this->faker->randomElement(['M', 'F', 'ND']),
+            "data_nascimento" => $date,
+            "signo" => $this->getZodiacSign($date),
+            "celular" =>  $this->faker->cellphoneNumber(),
+            "email" =>  $this->faker->unique()->safeEmail(),
+            "instagram" =>  $ig_username,
+        ];
     }
 
     public function getZodiacSign($data_nascimento) {
@@ -45,29 +55,5 @@ class ClienteController extends Controller
         } elseif (($month == 11 && $day >= 22 && $day <= 30) || ($month == 12 && $day >= 1 && $day <= 21)) {
             return "Sagitário";
         }
-    }
-
-    public function salvar(Request $request){
-
-        $request->validate([
-            "nome_completo" => 'required',
-            "genero" => 'required',
-            "data_nascimento" => 'required'
-        ]);
-
-
-        $cliente = new Clientes();
-        $cliente->nome_completo = $request->input("nome_completo");
-        $cliente->genero = $request->input("genero");
-        $cliente->data_nascimento = $request->input("data_nascimento");
-        $cliente->signo = $this->getZodiacSign($cliente->data_nascimento);
-        $cliente->celular = $request->input("celular");
-        $cliente->email = $request->input("email");
-        $cliente->instagram = $request->input("instagram");
-        
-        $cliente->save();
-
-        return redirect()->route('admin.home');
-
     }
 }

@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(CartasTarotSeeder::class);
+        $this->call(ClientesSeeder::class);
     }
 }
