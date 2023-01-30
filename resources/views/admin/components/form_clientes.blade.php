@@ -55,25 +55,32 @@
             </div>
 
             <div class="flex flex-wrap -mx-3 mb-6">
-              <div class="w-full md:w-1/3 px-3">
+              <div class="w-full md:w-1/4 px-3">
                 <label class="block uppercase tracking-wide text-gray-300 text-xs font-bold mb-2" for="data_nascimento">
                   Data de Nascimento
                 </label>
                 <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="data_nascimento" name="data_nascimento" type="date">
               </div>
 
-              <div class="w-full md:w-1/3 px-3">
+              <div class="w-full md:w-1/4 px-3">
                 <label class="block uppercase tracking-wide text-gray-300 text-xs font-bold mb-2" for="celular">
                   Celular
                 </label>
                 <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="celular" name="celular" type="text">
               </div>
 
-              <div class="w-full md:w-1/3 px-3">
+              <div class="w-full md:w-1/4 px-3">
                 <label class="block uppercase tracking-wide text-gray-300 text-xs font-bold mb-2" for="email">
                   E-mail
                 </label>
                 <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" name="email" type="email">
+              </div>
+
+              <div class="w-full md:w-1/4 px-3">
+                <label class="block uppercase tracking-wide text-gray-300 text-xs font-bold mb-2" for="instagram">
+                  Instagram
+                </label>
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="instagram" name="instagram" type="text">
               </div>
             </div>
 

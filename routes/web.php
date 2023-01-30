@@ -22,12 +22,13 @@ Route::get('/', function () {
 
 Route::prefix('/admin')->group(function(){
 
-    Route::get('/', function () {
-        return view('admin.dashboard', ['type' => 'unset']);
-    })->name('admin.home');
+    Route::get('/', function () { return view('admin.dashboard', ['type' => 'unset']);})
+        ->name('admin.home');
 
-    Route::get('/novo-jogo', [ClienteController::class, 'index'])->name('admin.novo-jogo');
-    Route::post('/novo-jogo', [ClienteController::class, 'index'])->name('admin.novo-jogo');
 
+    Route::get('/novo-jogo', [ClienteController::class, 'index'])
+        ->name('admin.novo-jogo');
+
+    Route::post('/novo-jogo', [ClienteController::class, 'salvar']);
 
 });

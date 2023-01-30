@@ -8,21 +8,8 @@ use Illuminate\Http\Request;
 
 class ClienteController extends Controller
 {
-    public function index(Request $request){
+    public function index(){
         
-        if($request) {
-            $cliente = new Clientes();
-            $cliente->nome_completo = $request->input("nome_completo");
-            $cliente->genero = $request->input("genero");
-            $cliente->data_nascimento = $request->input("data_nascimento");
-            $cliente->signo = $this->getZodiacSign($cliente->data_nascimento);
-            $cliente->celular = $request->input("celular");
-            $cliente->email = $request->input("email");
-            
-            // print_r($cliente->getAttributes());
-            $cliente->save();
-        }
-
         $x = ['type' => 'novo-jogo'];
 
         return view('admin.dashboard', $x);
@@ -58,5 +45,22 @@ class ClienteController extends Controller
         } elseif (($month == 11 && $day >= 22 && $day <= 30) || ($month == 12 && $day >= 1 && $day <= 21)) {
             return "Sagitário";
         }
+    }
+
+    public function salvar(Request $request){
+        $cliente = new Clientes();
+        $cliente->nome_completo = $request->input("nome_completo");
+        $cliente->genero = $request->input("genero");
+        $cliente->data_nascimento = $request->input("data_nascimento");
+        $cliente->signo = $this->getZodiacSign($cliente->data_nascimento);
+        $cliente->celular = $request->input("celular");
+        $cliente->email = $request->input("email");
+        $cliente->instagram = $request->input("instagram");
+        
+        // print_r($cliente->getAttributes());
+        $cliente->save();
+
+        return redirect()->route('admin.home');
+
     }
 }
