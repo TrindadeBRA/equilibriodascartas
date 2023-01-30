@@ -20,8 +20,8 @@ return new class extends Migration
             $table->date('data_nascimento');
             $table->string('signo');
             $table->string('celular')->nullable();
-            $table->string('email')->nullable();
             $table->string('instagram')->nullable();
+            $table->string('email')->nullable();
             $table->timestamps();
         });
     }

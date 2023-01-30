@@ -10,9 +10,9 @@ class ClienteController extends Controller
 {
     public function index(){
         
-        $x = ['type' => 'novo-jogo'];
+        $args = ['type' => 'novo-jogo'];
 
-        return view('admin.dashboard', $x);
+        return view('admin.dashboard', $args);
     }
 
     public function getZodiacSign($data_nascimento) {
@@ -69,5 +69,15 @@ class ClienteController extends Controller
 
         return redirect()->route('admin.home');
 
+    }
+
+    public function listarClientes(){
+
+        $listaClientes = Clientes::all();
+
+
+        $args = ['type' => 'listar-clientes', 'listaClientes' => $listaClientes];
+
+        return view('admin.dashboard', $args);
     }
 }

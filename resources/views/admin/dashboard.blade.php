@@ -7,13 +7,18 @@
         <script src="https://cdn.tailwindcss.com"></script>
         {{-- <link rel="stylesheet" href=" {{ @asset('css/style-basic.css') }} "> --}}
     </head>
+    <pre>
+        {{-- {{ print_r($listaClientes) }} Passar para lista de cliente --}}
+    
+    </pre>
+    
     <body>
         <div class="flex w-screen h-screen text-gray-400 bg-gray-900">
 
             @include('admin.layout.sidebar')
 
             
-            @include('admin.layout.dropdown')
+            {{-- @include('admin.layout.dropdown') --}}
 
             @switch($type)
 
@@ -23,6 +28,10 @@
 
                 @case('novo-jogo')
                     @include('admin.components.form_clientes')
+                    @break
+
+                @case('listar-clientes')
+                    @include('admin.components.table_clientes')
                     @break
                 
             @endswitch

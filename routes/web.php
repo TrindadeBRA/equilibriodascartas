@@ -25,6 +25,9 @@ Route::prefix('/admin')->group(function(){
     Route::get('/', function () { return view('admin.dashboard', ['type' => 'unset']);})
         ->name('admin.home');
 
+    Route::get('/clientes', [ClienteController::class, 'listarClientes'])
+        ->name('admin.listar-clientes');
+
 
     Route::get('/novo-jogo', [ClienteController::class, 'index'])
         ->name('admin.novo-jogo');
