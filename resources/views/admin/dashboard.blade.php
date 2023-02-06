@@ -31,7 +31,7 @@
                     @break
 
                 @case('nova-tiragem')
-                    @include('admin.layout.content')
+                    @include('admin.tiragem.layout')
                     @break
                 
             @endswitch
