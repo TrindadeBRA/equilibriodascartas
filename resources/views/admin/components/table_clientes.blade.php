@@ -24,51 +24,51 @@
   
   <div class="w-full overflow-auto	">
 
-      <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
-        <thead class="bg-gray-50">
+      <table class="w-full border-collapse text-left text-sm text-gray-500">
+        <thead class="">
           <tr>
-            <th scope="col" class="px-6 py-4 font-medium text-gray-900">Nome / Email</th>
-            <th scope="col" class="px-6 py-4 font-medium text-gray-900">Gênero</th>
-            <th scope="col" class="px-6 py-4 font-medium text-gray-900">Nascimento / Signo</th>
-            <th scope="col" class="px-6 py-4 font-medium text-gray-900">Celular</th>
-            <th scope="col" class="px-6 py-4 font-medium text-gray-900">Instagram</th>
-            <th scope="col" class="px-6 py-4 font-medium text-gray-900">Ações</th>
+            <th scope="col" class="px-6 py-4 font-medium text-white">Nome / Email</th>
+            <th scope="col" class="px-6 py-4 font-medium text-white">Gênero</th>
+            <th scope="col" class="px-6 py-4 font-medium text-white">Nascimento / Signo</th>
+            <th scope="col" class="px-6 py-4 font-medium text-white">Celular</th>
+            <th scope="col" class="px-6 py-4 font-medium text-white">Instagram</th>
+            <th scope="col" class="px-6 py-4 font-medium text-white">Ações</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-gray-100 border-t border-gray-100">
           @foreach ($listaClientes as $cliente)
-            <tr class="hover:bg-gray-50">
+            <tr class="hover:bg-gray-700 hover:text-white">
 
               {{-- Nome / Email --}}
               <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
                 <div class="text-sm">
-                  <div class="font-medium text-gray-700">{{$cliente->nome_completo}}</div>
+                  <div class="font-medium text-white">{{$cliente->nome_completo}}</div>
                   <div class="text-gray-400">{{$cliente->email}}</div>
                 </div>
               </th>
 
               {{-- Gênero --}}
               <td class="px-6 py-4">
-                <div class="font-medium text-gray-700">{{$cliente->genero}}</div>
+                <div class="font-medium text-gray-400">{{$cliente->genero}}</div>
               </td>
               
               {{-- Nascimento / Signo --}}
               <td class="px-6 py-4">
-                <div class="text-gray-400">{{$cliente->data_nascimento}}</div>
-                <div class="font-medium text-gray-700">{{$cliente->signo}}</div>
+                <div class="text-white">{{$cliente->data_nascimento}}</div>
+                <div class="font-medium text-gray-400">{{$cliente->signo}}</div>
               </td>
 
               {{-- Celular --}}
               <td class="px-6 py-4">
                 <div class="flex gap-2">
-                  <div class="text-gray-400">{{$cliente->celular}}</div>
+                  <div class="text-white">{{$cliente->celular}}</div>
                 </div>
               </td>
 
               {{-- Instagram --}}
               <td class="px-6 py-4">
                 <div class="flex gap-2">
-                  <div class="text-gray-400">{{$cliente->instagram}}</div>
+                  <div class="text-white">{{$cliente->instagram}}</div>
                 </div>
               </td>
 
