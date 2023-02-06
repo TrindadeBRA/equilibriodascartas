@@ -11,7 +11,7 @@
     <body>
         <div class="flex w-screen h-screen text-gray-400 bg-gray-900">
 
-            @include('admin.layout.sidebar')
+            @include('admin._layout.sidebar')
 
             
             {{-- @include('admin.layout.dropdown') --}}
@@ -19,15 +19,15 @@
             @switch($type)
 
                 @case('unset')
-                    @include('admin.layout.content')
+                    @include('admin._layout.content')
                     @break
 
                 @case('novo-cliente')
-                    @include('admin.components.form_clientes')
+                    @include('admin.cliente.components.form_clientes')
                     @break
 
                 @case('listar-clientes')
-                    @include('admin.components.table_clientes', ['listaClientes' => $listaClientes])
+                    @include('admin.cliente.components.table_clientes', ['listaClientes' => $listaClientes])
                     @break
 
                 @case('nova-tiragem')

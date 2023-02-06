@@ -1,4 +1,4 @@
-<div class="flex flex-col flex-grow">
+<div class="flex flex-col flex-grow h-full">
 
     <div class="flex items-center flex-shrink-0 h-16 px-8 border-b border-gray-800">
         <h1 class="text-lg font-medium">Adicionar Cliente</h1>
@@ -22,13 +22,17 @@
         </button>
     </div>
 
-    <div class="columns-3 w-full">
-        <div class="bg-gray-400 w-full mb-2">XXX</div>
-        <div class="bg-gray-400 w-full mb-2">XXX</div>
-        <div class="bg-gray-400 w-full mb-2">XXX</div>
-        <div class="bg-gray-400 w-full mb-2">XXX</div>
-        <div class="bg-gray-400 w-full mb-2">XXX</div>
-        <div class="bg-gray-400 w-full mb-2">XXX</div>
+    <div class="grid grid-cols-3 gap-3 overflow-hidden">
+
+        {{-- Card preview --}}
+        <div class="bg-gray-400 w-full h-screen rounded ">XXX</div>
+
+        {{-- Valores / Historico --}}
+        <div class="bg-gray-400 w-full h-screen rounded ">XXX</div>
+
+        {{-- Dados Clientes / Anotacoes --}}
+        <div class="bg-gray-400 w-full h-screen rounded ">XXX</div>
+
     </div>
 
 </div>
