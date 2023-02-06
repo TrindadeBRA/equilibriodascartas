@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\TiragemController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,5 +34,11 @@ Route::prefix('/admin')->group(function(){
         ->name('admin.novo-cliente');
 
     Route::post('/novo-cliente', [ClienteController::class, 'salvar']);
+
+    Route::get('/nova-tiragem', [TiragemController::class, 'index'])
+        ->name('admin.nova-tiragem');
+
+
+    
 
 });

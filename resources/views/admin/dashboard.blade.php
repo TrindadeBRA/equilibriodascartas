@@ -29,6 +29,10 @@
                 @case('listar-clientes')
                     @include('admin.components.table_clientes', ['listaClientes' => $listaClientes])
                     @break
+
+                @case('nova-tiragem')
+                    @include('admin.layout.content')
+                    @break
                 
             @endswitch
 
