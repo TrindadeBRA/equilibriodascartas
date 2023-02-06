@@ -29,9 +29,9 @@ Route::prefix('/admin')->group(function(){
         ->name('admin.listar-clientes');
 
 
-    Route::get('/novo-jogo', [ClienteController::class, 'index'])
-        ->name('admin.novo-jogo');
+    Route::get('/novo-cliente', [ClienteController::class, 'index'])
+        ->name('admin.novo-cliente');
 
-    Route::post('/novo-jogo', [ClienteController::class, 'salvar']);
+    Route::post('/novo-cliente', [ClienteController::class, 'salvar']);
 
 });

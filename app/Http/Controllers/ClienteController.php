@@ -10,7 +10,7 @@ class ClienteController extends Controller
 {
     public function index(){
         
-        $args = ['type' => 'novo-jogo'];
+        $args = ['type' => 'novo-cliente'];
 
         return view('admin.dashboard', $args);
     }

@@ -22,7 +22,7 @@
                     @include('admin.layout.content')
                     @break
 
-                @case('novo-jogo')
+                @case('novo-cliente')
                     @include('admin.components.form_clientes')
                     @break
 

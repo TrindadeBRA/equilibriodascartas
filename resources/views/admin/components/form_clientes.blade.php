@@ -26,7 +26,7 @@
 
         
 
-        <form action="{{ route('admin.novo-jogo') }}" method="POST">
+        <form action="{{ route('admin.novo-cliente') }}" method="POST">
             @csrf
 
             <div class="flex flex-wrap -mx-3 mb-6">
